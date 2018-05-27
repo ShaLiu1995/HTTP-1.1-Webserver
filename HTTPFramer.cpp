@@ -37,7 +37,7 @@ void HTTPFramer::popMessage()
         return;
 	}
 
-	buffer.erase(0, idx + 2);
+	buffer.erase(0, idx + delim.length());
 }
 
 void HTTPFramer::printToStream(std::ostream& stream) const
